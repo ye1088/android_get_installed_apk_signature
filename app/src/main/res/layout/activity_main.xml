@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.google.getsign.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <MultiAutoCompleteTextView
+            android:id="@+id/pack_name_et"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:lines="1"
+            android:hint="@string/packageName"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/selectApk"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/select"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/getSign"
+        android:layout_width="match_parent"
+        android:text="@string/get_signature"
+        android:layout_height="wrap_content" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/signTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/copy_sign"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:text="@string/click_copy"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+</ScrollView>
+
+
+</LinearLayout>

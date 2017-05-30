@@ -1,1 +1,0 @@
-Hello Android_get_installed_apk_signature

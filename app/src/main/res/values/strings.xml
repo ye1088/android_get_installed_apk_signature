@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GetSign</string>
+    <string name="select">Select</string>
+    <string name="packageName">Enter Package Name</string>
+    <string name="get_signature">Get Signature</string>
+    <string name="click_copy">点击复制</string>
+    <string name="copy_finish">文本已复制</string>
+</resources>
