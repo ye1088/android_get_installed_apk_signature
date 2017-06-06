@@ -23,6 +23,8 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.utils.GetApkSignatureByUninstall;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+
     }
 
 
@@ -106,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         build.setIcon(R.mipmap.ic_launcher);
 
-        sign_type = new String[]{"MD5短签名","链式长签名"};
+        sign_type = new String[]{"MD5短签名","链式长签名","charArray式"};
 
     }
 
@@ -218,6 +221,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         case 1:
                             errout(toCharsString(rawSignatures[0].toByteArray()));
                             break;
+                        case 2:
+                            System.out.println(rawSignatures[0].toByteArray().toString());
+
+                            break;
                     }
 
                 }
@@ -231,7 +238,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     /**
      * 将签名转成转成可见字符串
-     *
+     * 这个其实就是讲
      * @param sigBytes
      * @return
      */
@@ -275,6 +282,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         return null;
     }
+
 
     private void errout(String nameNotFoundException) {
         Log.e("MainActivity","MainActivity Log : "+nameNotFoundException);
