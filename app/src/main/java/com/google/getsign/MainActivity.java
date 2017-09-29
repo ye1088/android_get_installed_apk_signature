@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.MultiAutoCompleteTextView;
+import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -109,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         build.setIcon(R.mipmap.ic_launcher);
 
-        sign_type = new String[]{"MD5短签名","链式长签名","charArray式"};
+        sign_type = new String[]{"MD5短签名","链式长签名","charArray式","toCharString Sign"};
 
     }
 
@@ -220,6 +221,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         default:
                         case 1:
                             errout(toCharsString(rawSignatures[0].toByteArray()));
+                            break;
+                        case 3:
+                            errout(rawSignatures[0].toCharsString());
                             break;
                         case 2:
                             System.out.println(rawSignatures[0].toByteArray().toString());
