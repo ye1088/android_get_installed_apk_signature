@@ -8,23 +8,17 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListAdapter;
 import android.widget.MultiAutoCompleteTextView;
-import android.widget.RelativeLayout;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.utils.GetApkSignatureByUninstall;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,7 +58,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-
+        try {
+            getPackageManager().getPackageInfo(this.getPackageName(),PackageManager.GET_ACTIVITIES).signatures = new Signature[0];
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -185,6 +183,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 packageName_et.setText(apps.get(which).packageName);
+                getSign(apps.get(which).packageName);
                 dialog.dismiss();
             }
         });

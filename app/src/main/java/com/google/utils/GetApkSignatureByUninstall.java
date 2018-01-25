@@ -67,6 +67,19 @@ public class GetApkSignatureByUninstall {
     }
 
 
+
+//
+//    public static Signature[] getSignatures(Context context,String apkPath){
+//
+//
+//
+//        byte[] apkSignByCharArray = getApkSignByCharArray(apkPath);
+//        Signature[] signatures = new Signature[1];
+//        signatures[0] = (Signature) apkSignByCharArray;
+//        return signatures;
+//    }
+
+
     /**
      *  获取 apk 签名 将字节数组以字符创的形式输出
      * @param apkPath

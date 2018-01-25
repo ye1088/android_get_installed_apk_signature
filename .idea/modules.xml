@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GetSign.iml" filepath="$PROJECT_DIR$/GetSign.iml" />
+      <module fileurl="file://D:\tools\code\work_code\android_get_installed_apk_signature\GetSign.iml" filepath="D:\tools\code\work_code\android_get_installed_apk_signature\GetSign.iml" />
       <module fileurl="file://$PROJECT_DIR$/android_get_installed_apk_signature.iml" filepath="$PROJECT_DIR$/android_get_installed_apk_signature.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
